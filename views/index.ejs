@@ -1,0 +1,10 @@
+<ul>
+    <% messages.forEach((msg, index) => { %>
+        <li>
+            <strong><%= msg.user %>:</strong> <%= msg.text %>
+            <a href="/messages/<%= index %>">Open</a>
+            <a href="/messages/<%= index %>/edit">Edit</a>
+            <a href="/messages/<%= index %>/delete" onclick="return confirm('Are you sure?');">Delete</a>
+        </li>
+    <% }) %>
+</ul>

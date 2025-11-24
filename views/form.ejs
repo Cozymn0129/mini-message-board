@@ -1,0 +1,15 @@
+<h1><%= title %></h1>
+
+<form method="POST" action="/new">
+    <div class="name">
+        <label for="messageUser">Name:</label>
+        <input type="text" id="messageUser" name="messageUser" placeholder="Your name">
+    </div>
+    <div class="message">
+        <label class="message-label" for="messageText">Message:</label>
+        <textarea name="messageText" id="messageText" rows="4" cols="50" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<p><a href="/">Back to Top</a></p>
