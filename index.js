@@ -2,7 +2,6 @@ const express = require('express');
 const router = require('./routes');
 
 const app = express();
-const port = 8080;
 
 // template engine
 app.set('view engine', 'ejs');
@@ -30,4 +29,5 @@ app.get('/items', (req, res) => res.json([
 // 404 fallback
 app.use((req, res) => res.status(404).send('Not Found'));
 
-app.listen(port, () => console.log(`Server running at http://localhost:${port}`));
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log(`Server running on port ${port}`));
